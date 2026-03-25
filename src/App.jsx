@@ -1197,7 +1197,7 @@ function Contact() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nBusiness: ${form.business}\nIndustry: ${form.industry}\n\nMessage:\n${form.message}`
     );
-    window.open(`mailto:greg@gizmo-ops.com?subject=${subject}&body=${body}`);
+    window.open(`mailto:greg.elder@gizmo-ops.com?subject=${subject}&body=${body}`);
     setSubmitted(true);
   };
 
@@ -1268,8 +1268,8 @@ function Contact() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
                 {[
-                  { label: "Email", value: "greg@gizmo-ops.com" },
-                  { label: "Email", value: "kezia@gizmo-ops.com" },
+                  { label: "Email", value: "greg.elder@gizmo-ops.com" },
+                  { label: "Email", value: "kezia.elder@gizmo-ops.com" },
                   { label: "Web", value: "gizmo-ops.com" },
                 ].map((c, i) => (
                   <div key={i} style={{ display: "flex", gap: 12 }}>
@@ -1462,7 +1462,7 @@ function Footer() {
             <span style={{ color: GOLD, fontWeight: 500 }}>gizmo-ops.com</span>
           </div>
           <div style={{ fontSize: 13, color: "rgba(255,255,255,0.35)" }}>
-            greg@gizmo-ops.com · kezia@gizmo-ops.com
+            greg.elder@gizmo-ops.com · kezia.elder@gizmo-ops.com
           </div>
         </div>
       </div>
