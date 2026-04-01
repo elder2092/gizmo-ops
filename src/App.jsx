@@ -134,6 +134,7 @@ function Nav({ activeSection }) {
           >
             Free Audit
           </button>
+         
           <a
             href="https://app.gizmo-ops.com"
             target="_blank"
@@ -204,7 +205,8 @@ function Nav({ activeSection }) {
             </button>
           ))}
           
-            href="https://app.gizmo-ops.com"
+        <a    
+          href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
             style={{
