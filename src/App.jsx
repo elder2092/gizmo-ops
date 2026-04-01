@@ -87,7 +87,7 @@ function Nav({ activeSection }) {
           </span>
         </div>
 
-        {/* Desktop links */}
+       {/* Desktop links */}
         <div
           style={{
             display: "flex",
