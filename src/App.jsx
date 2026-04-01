@@ -941,30 +941,45 @@ function RoiBand() {
 
 // ─── PRICING ───
 function Pricing() {
-  const tiers = [
+  const managedTiers = [
     {
-      market: "Foundations",
-      price: "$1,250",
+      name: "Starter",
+      price: "$750",
       period: "/mo",
-      setup: "Setup from $2,500",
-      note: "All core automations, connected lead sources, and monthly performance reporting.",
+      setup: "Setup from $1,500",
+      note: "Core automations, connected lead sources, and monthly performance reporting. Ideal for solo operators and individual realtors.",
       featured: false,
     },
     {
-      market: "Growth",
-      price: "$1,500–$2,500",
+      name: "Growth",
+      price: "$999–$1,250",
       period: "/mo",
-      setup: "Setup from $1,500–$5,000",
-      note: "Full system including owner dashboard, all sequences, and monthly strategy calls.",
+      setup: "Setup from $2,000–$3,000",
+      note: "Full system including sequence management, staff onboarding, database reactivation campaigns, and a monthly strategy call.",
       featured: true,
     },
     {
-      market: "UK Clients · GBP Pricing",
-      price: "£600–£1,750",
+      name: "Full Operations",
+      price: "$1,500",
       period: "/mo",
-      setup: "Setup from £840",
-      note: "Full managed service for UK-based businesses. All pricing in GBP.",
+      setup: "Setup from $3,000–$4,000",
+      note: "Gizmo as your outsourced revenue operations team. Full system management, custom reporting, priority support, and quarterly growth reviews.",
       featured: false,
+    },
+  ];
+
+  const crmTiers = [
+    {
+      name: "Individual",
+      price: "$49",
+      period: "/mo",
+      note: "For solo realtors and operators. Full CRM access, up to 500 contacts, pipeline management, and mobile app access.",
+    },
+    {
+      name: "Business",
+      price: "$299",
+      period: "/mo",
+      note: "For team leaders and brokerages. Unlimited contacts, team management, performance dashboards, sequences and campaigns.",
     },
   ];
 
@@ -997,11 +1012,26 @@ function Pricing() {
                 marginBottom: 16,
               }}
             >
-              Simple, transparent retainers.
+              Simple, transparent pricing.
             </h2>
-            <p style={{ fontSize: 16, color: MUTED, maxWidth: 520, margin: "0 auto", fontWeight: 300, lineHeight: 1.7 }}>
-              No hidden fees. No long-term contracts. The retainer pays for itself from recovered revenue within the first month.
+            <p style={{ fontSize: 16, color: MUTED, maxWidth: 560, margin: "0 auto", fontWeight: 300, lineHeight: 1.7 }}>
+              Use the Gizmo CRM yourself, or let us run it for you. No hidden fees. No long-term contracts.
             </p>
+          </div>
+        </FadeIn>
+
+        {/* Managed Services Tiers */}
+        <FadeIn>
+          <div style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: 11,
+            fontWeight: 700,
+            textTransform: "uppercase",
+            letterSpacing: 3,
+            color: MUTED,
+            marginBottom: 20,
+          }}>
+            Managed Services — We Run It For You
           </div>
         </FadeIn>
 
@@ -1010,10 +1040,11 @@ function Pricing() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: 20,
+            marginBottom: 48,
           }}
           className="pricing-grid"
         >
-          {tiers.map((t, i) => (
+          {managedTiers.map((t, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div
                 style={{
@@ -1036,7 +1067,7 @@ function Pricing() {
                     marginBottom: 12,
                   }}
                 >
-                  {t.market}
+                  {t.name}
                 </div>
                 <div
                   style={{
@@ -1106,6 +1137,120 @@ function Pricing() {
             </FadeIn>
           ))}
         </div>
+
+        {/* CRM Self-Serve Tiers */}
+        <FadeIn>
+          <div style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: 11,
+            fontWeight: 700,
+            textTransform: "uppercase",
+            letterSpacing: 3,
+            color: MUTED,
+            marginBottom: 20,
+          }}>
+            Gizmo CRM — Self-Serve Access
+          </div>
+        </FadeIn>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: 20,
+          }}
+          className="pricing-grid"
+        >
+          {crmTiers.map((t, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+              <div
+                style={{
+                  padding: "32px",
+                  background: WHITE,
+                  border: "1px solid rgba(212,216,234,0.8)",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "'Syne', sans-serif",
+                    fontSize: 10,
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: 2,
+                    color: MUTED,
+                    marginBottom: 12,
+                  }}
+                >
+                  {t.name}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Syne', sans-serif",
+                    fontWeight: 800,
+                    fontSize: 28,
+                    color: RED,
+                    lineHeight: 1,
+                    marginBottom: 16,
+                  }}
+                >
+                  {t.price}
+                  <span style={{ fontSize: 14, fontWeight: 400, color: MUTED }}>
+                    {t.period}
+                  </span>
+                </div>
+                <div
+                  style={{
+                    fontSize: 14,
+                    color: MUTED,
+                    lineHeight: 1.6,
+                    fontWeight: 300,
+                    flex: 1,
+                  }}
+                >
+                  {t.note}
+                </div>
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  style={{
+                    marginTop: 24,
+                    width: "100%",
+                    padding: "14px",
+                    background: "transparent",
+                    color: NAVY,
+                    border: `1px solid ${NAVY}`,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 14,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    letterSpacing: 0.5,
+                    transition: "all 0.3s",
+                  }}
+                >
+                  Get Started
+                </button>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn delay={0.2}>
+          <p style={{
+            textAlign: "center",
+            fontSize: 13,
+            color: MUTED,
+            marginTop: 32,
+            fontWeight: 300,
+          }}>
+            All managed service plans include access to the Gizmo CRM at no additional cost.
+          </p>
+        </FadeIn>
+
       </div>
     </Section>
   );
