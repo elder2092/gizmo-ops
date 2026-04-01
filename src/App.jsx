@@ -153,7 +153,7 @@ function Nav({ activeSection }) {
             onMouseEnter={(e) => (e.target.style.color = RED)}
             onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.6)")}
           >
-            Sign In
+            Sign In/Sign Up
           </a>
         </div>
 
