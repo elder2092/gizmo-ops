@@ -134,6 +134,24 @@ function Nav({ activeSection }) {
           >
             Free Audit
           </button>
+          
+            href="https://app.gizmo-ops.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 13,
+              fontWeight: 500,
+              color: "rgba(255,255,255,0.5)",
+              textDecoration: "none",
+              letterSpacing: 0.5,
+              transition: "color 0.3s",
+            }}
+            onMouseEnter={(e) => e.target.style.color = WHITE}
+            onMouseLeave={(e) => e.target.style.color = "rgba(255,255,255,0.5)"}
+          >
+            Sign In
+          </a>
         </div>
 
         {/* Mobile hamburger */}
