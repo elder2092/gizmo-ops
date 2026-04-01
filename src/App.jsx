@@ -143,13 +143,15 @@ function Nav({ activeSection }) {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13,
               fontWeight: 500,
-              color: "rgba(255,255,255,0.5)",
+              color: "rgba(255,255,255,0.6)",
               textDecoration: "none",
               letterSpacing: 0.5,
+              textTransform: "uppercase",
               transition: "color 0.3s",
+              cursor: "pointer",
             }}
-            onMouseEnter={(e) => (e.target.style.color = WHITE)}
-            onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.5)")}
+            onMouseEnter={(e) => (e.target.style.color = RED)}
+            onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.6)")}
           >
             Sign In
           </a>
