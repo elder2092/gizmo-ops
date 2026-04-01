@@ -87,7 +87,7 @@ function Nav({ activeSection }) {
           </span>
         </div>
 
-       {/* Desktop links */}
+        {/* Desktop links */}
         <div
           style={{
             display: "flex",
@@ -147,8 +147,8 @@ function Nav({ activeSection }) {
               letterSpacing: 0.5,
               transition: "color 0.3s",
             }}
-            onMouseEnter={(e) => e.target.style.color = WHITE}
-            onMouseLeave={(e) => e.target.style.color = "rgba(255,255,255,0.5)"}
+            onMouseEnter={(e) => (e.target.style.color = WHITE)}
+            onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.5)")}
           >
             Sign In
           </a>
@@ -203,6 +203,21 @@ function Nav({ activeSection }) {
               {l.label}
             </button>
           ))}
+          
+            href="https://app.gizmo-ops.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 16,
+              fontWeight: 500,
+              color: "rgba(255,255,255,0.5)",
+              textDecoration: "none",
+              padding: "8px 0",
+            }}
+          >
+            Sign In
+          </a>
         </div>
       )}
     </nav>
@@ -823,7 +838,6 @@ function Services() {
                   padding: "28px 24px",
                   background: WHITE,
                   borderTop: `4px solid ${step.color}`,
-                  opacity: i === 3 ? 1 : 1 - i * 0.08,
                 }}
               >
                 <div
@@ -1088,7 +1102,6 @@ function Pricing() {
             </FadeIn>
           ))}
         </div>
-
       </div>
     </Section>
   );
@@ -1210,7 +1223,6 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Using Formspree-style mailto fallback
     const subject = encodeURIComponent(`Gizmo Ops Enquiry — ${form.business}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nBusiness: ${form.business}\nIndustry: ${form.industry}\n\nMessage:\n${form.message}`
