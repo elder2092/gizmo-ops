@@ -194,6 +194,7 @@ function Nav({ activeSection }) {
               padding: "4px 20px",
               transition: "all 0.3s",
               cursor: "pointer",
+              whiteSpace: "nowrap",
               textAlign: "center",
               lineHeight: 1.2,
             }}
