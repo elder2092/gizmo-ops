@@ -91,7 +91,7 @@ function Nav({ activeSection }) {
         <div
           style={{
             display: "flex",
-            gap: 32,
+            gap: 28,
             alignItems: "center",
           }}
           className="nav-desktop"
@@ -207,7 +207,8 @@ function Nav({ activeSection }) {
           >
             Sign In
           </a>
-</div>
+        </div>
+
         {/* Mobile hamburger */}
         <button
           className="nav-mobile-btn"
