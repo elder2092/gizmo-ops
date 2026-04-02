@@ -191,9 +191,11 @@ function Nav({ activeSection }) {
               letterSpacing: 0.5,
               textTransform: "uppercase",
               border: "1.5px solid rgba(255,255,255,0.45)",
-              padding: "7px 24px",
+              padding: "7px 20px",
               transition: "all 0.3s",
               cursor: "pointer",
+              textAlign: "center",
+              lineHeight: 1.2,
             }}
             onMouseEnter={(e) => {
               e.target.style.borderColor = WHITE;
