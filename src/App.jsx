@@ -367,7 +367,7 @@ function Hero() {
               marginBottom: 24,
             }}
           >
-            Managed Revenue Operations
+            CRM Software · Managed Revenue Operations
           </div>
         </FadeIn>
 
@@ -379,15 +379,15 @@ function Hero() {
               fontSize: "clamp(36px, 5.5vw, 64px)",
               color: WHITE,
               lineHeight: 1.1,
-              maxWidth: 780,
+              maxWidth: 820,
               marginBottom: 28,
               letterSpacing: -1,
             }}
           >
-            Your CRM should be{" "}
-            <span style={{ color: RED }}>making you money.</span>
+            The CRM built for{" "}
+            <span style={{ color: RED }}>relationship-driven businesses.</span>
             <br />
-            We make sure it does.
+            We'll run it for you too.
           </h1>
         </FadeIn>
 
@@ -397,19 +397,37 @@ function Hero() {
               fontSize: 18,
               color: "rgba(255,255,255,0.45)",
               lineHeight: 1.7,
-              maxWidth: 560,
-              marginBottom: 40,
+              maxWidth: 600,
+              marginBottom: 14,
               fontWeight: 300,
             }}
           >
-            We build and run the operational infrastructure that turns your CRM
-            investment into measurable business results — without you having to
-            manage it.
+            Built for businesses where relationships drive revenue — real
+            estate, aesthetics, financial services, and beyond. Use it
+            yourself, or let our team build and run it for you.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.25}>
+          <p
+            style={{
+              fontSize: 13,
+              color: "rgba(255,255,255,0.35)",
+              marginBottom: 36,
+              fontWeight: 300,
+              letterSpacing: 0.2,
+            }}
+          >
+            <strong style={{ color: "rgba(255,255,255,0.55)", fontWeight: 500 }}>
+              14-day free trial included.
+            </strong>{" "}
+            No credit card required. Need more? Our managed service team will
+            handle everything.
           </p>
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
             <button
               onClick={() =>
                 document
@@ -426,6 +444,7 @@ function Hero() {
                 padding: "16px 36px",
                 cursor: "pointer",
                 letterSpacing: 0.5,
+                textTransform: "uppercase",
                 transition: "transform 0.2s, box-shadow 0.2s",
               }}
               onMouseEnter={(e) => {
@@ -437,42 +456,56 @@ function Hero() {
                 e.target.style.boxShadow = "none";
               }}
             >
-              Book a Free CRM Audit →
+              Book Demo →
             </button>
             <button
               onClick={() =>
                 document
-                  .getElementById("services")
+                  .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               style={{
-                background: "transparent",
-                color: "rgba(255,255,255,0.6)",
-                border: "1px solid rgba(255,255,255,0.15)",
+                background: WHITE,
+                color: NAVY,
+                border: "none",
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 15,
-                fontWeight: 500,
+                fontWeight: 600,
                 padding: "16px 36px",
                 cursor: "pointer",
                 letterSpacing: 0.5,
-                transition: "all 0.3s",
+                textTransform: "uppercase",
+                transition: "transform 0.2s, box-shadow 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.target.style.borderColor = "rgba(255,255,255,0.4)";
-                e.target.style.color = WHITE;
+                e.target.style.transform = "translateY(-2px)";
+                e.target.style.boxShadow = "0 8px 30px rgba(255,255,255,0.15)";
               }}
               onMouseLeave={(e) => {
-                e.target.style.borderColor = "rgba(255,255,255,0.15)";
-                e.target.style.color = "rgba(255,255,255,0.6)";
+                e.target.style.transform = "translateY(0)";
+                e.target.style.boxShadow = "none";
               }}
             >
-              How It Works
+              Start Trial →
             </button>
           </div>
         </FadeIn>
 
-        {/* Hero stat bar */}
-        <FadeIn delay={0.5} style={{ marginTop: 72 }}>
+        <FadeIn delay={0.35}>
+          <p
+            style={{
+              fontSize: 12,
+              color: "rgba(255,255,255,0.28)",
+              marginTop: 14,
+              fontWeight: 300,
+            }}
+          >
+            Free for 14 days&nbsp;&nbsp;·&nbsp;&nbsp;No credit card required&nbsp;&nbsp;·&nbsp;&nbsp;Cancel anytime
+          </p>
+        </FadeIn>
+
+        {/* Stat bar */}
+        <FadeIn delay={0.5} style={{ marginTop: 64 }}>
           <div
             style={{
               display: "grid",
@@ -481,9 +514,19 @@ function Hero() {
               border: "1px solid rgba(255,255,255,0.06)",
             }}
           >
-            <StatCard number="78%" label="of customers buy from the first business to respond" />
-            <StatCard number="42hrs" label="average lead response time across industries" accent={GOLD} />
-            <StatCard number="51%" label="of leads are never contacted at all" />
+            <StatCard
+              number="78%"
+              label="of customers buy from the first business to respond"
+            />
+            <StatCard
+              number="14-day"
+              label="free trial — fully configured, no credit card required"
+              accent={GOLD}
+            />
+            <StatCard
+              number="$8.71"
+              label="returned for every $1 spent on CRM when properly managed"
+            />
           </div>
         </FadeIn>
       </div>
