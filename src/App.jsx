@@ -93,6 +93,7 @@ function Nav({ activeSection }) {
             display: "flex",
             gap: 28,
             alignItems: "center",
+            marginLeft: "auto",
           }}
           className="nav-desktop"
         >
