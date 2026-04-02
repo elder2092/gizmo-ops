@@ -154,6 +154,7 @@ function Nav({ activeSection }) {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
+            <a
             href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
