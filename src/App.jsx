@@ -149,6 +149,7 @@ function Nav({ activeSection }) {
             Book Demo
           </button>
           
+          <a
             href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -179,7 +180,7 @@ function Nav({ activeSection }) {
           >
             Start Trial
           </a>
-          
+          <a
             href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
