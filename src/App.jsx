@@ -626,138 +626,228 @@ function ProblemStrip() {
   );
 }
 
-// ─── ABOUT ───
+// ─── PRODUCT INTRO ───
 function About() {
   return (
     <Section id="about" bg={WHITE}>
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "100px 24px",
-        }}
-      >
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 24px" }}>
+
+        {/* Header */}
+        <FadeIn>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <div
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: 11,
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: 4,
+                color: RED,
+                marginBottom: 16,
+              }}
+            >
+              The Gizmo CRM
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(28px, 3.5vw, 40px)",
+                color: NAVY,
+                lineHeight: 1.15,
+                letterSpacing: -0.5,
+                maxWidth: 640,
+                margin: "0 auto 16px",
+              }}
+            >
+              Built by operators. For operators.
+            </h2>
+            <p style={{
+              fontSize: 16,
+              color: MUTED,
+              maxWidth: 520,
+              margin: "0 auto",
+              fontWeight: 300,
+              lineHeight: 1.7,
+            }}>
+              Most CRMs are built by engineers for everyone. Gizmo was built
+              by revenue operations specialists for the industries where
+              relationships are the product.
+            </p>
+          </div>
+        </FadeIn>
+
+        {/* Screenshot + Features grid */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: 80,
+            gap: 64,
             alignItems: "center",
           }}
           className="about-grid"
         >
+          {/* CRM Screenshot */}
           <FadeIn>
-            <div>
-              <div
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: 11,
-                  fontWeight: 700,
-                  textTransform: "uppercase",
-                  letterSpacing: 4,
-                  color: RED,
-                  marginBottom: 16,
-                }}
-              >
-                About Gizmo Operations
-              </div>
-              <h2
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontWeight: 800,
-                  fontSize: "clamp(28px, 3.5vw, 40px)",
-                  color: NAVY,
-                  lineHeight: 1.15,
-                  marginBottom: 24,
-                  letterSpacing: -0.5,
-                }}
-              >
-                We are not a software company.
-              </h2>
-              <p
-                style={{
-                  fontSize: 16,
-                  color: MUTED,
-                  lineHeight: 1.75,
-                  marginBottom: 20,
-                  fontWeight: 300,
-                }}
-              >
-                We are the managed service layer that makes your CRM actually
-                work. We build the system, connect your lead sources, configure
-                the automations, train your team, and manage everything ongoing —
-                so you get the results the software always promised but never
-                delivered.
-              </p>
-              <p
-                style={{
-                  fontSize: 16,
-                  color: MUTED,
-                  lineHeight: 1.75,
-                  fontWeight: 300,
-                }}
-              >
-                Founded by Greg and Kezia Elder, Gizmo Operations serves
-                relationship-driven businesses across the US and UK — from real
-                estate brokerages to aesthetics clinics. We don't sell software.
-                We deliver the results that software is capable of producing when
-                properly built, configured, and managed.
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.2}>
             <div
               style={{
-                background: PALE,
-                padding: 40,
                 position: "relative",
+                borderRadius: 4,
+                overflow: "hidden",
+                boxShadow: "0 24px 80px rgba(30,43,94,0.15), 0 4px 16px rgba(30,43,94,0.08)",
+                border: "1px solid rgba(30,43,94,0.08)",
               }}
             >
               <div
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: 4,
-                  height: "100%",
                   background: NAVY,
+                  padding: "10px 16px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
                 }}
+              >
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "rgba(255,255,255,0.15)" }} />
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "rgba(255,255,255,0.15)" }} />
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "rgba(255,255,255,0.15)" }} />
+                <div style={{
+                  marginLeft: 8,
+                  fontSize: 11,
+                  color: "rgba(255,255,255,0.4)",
+                  fontFamily: "'DM Sans', sans-serif",
+                  letterSpacing: 0.5,
+                }}>
+                  app.gizmo-ops.com
+                </div>
+              </div>
+              <img
+                src="/crm-dashboard.png"
+                alt="Gizmo CRM Dashboard"
+                style={{ width: "100%", display: "block" }}
               />
+            </div>
+          </FadeIn>
+
+          {/* Feature callouts */}
+          <FadeIn delay={0.2}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 36 }}>
               {[
-                { num: "$8.71", text: "return for every $1 spent on CRM — when used properly" },
-                { num: "29%", text: "average sales revenue increase with managed CRM" },
-                { num: "34%", text: "improvement in sales productivity" },
-                { num: "5-10hrs", text: "saved per employee per week" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  style={{
-                    marginBottom: i < 3 ? 28 : 0,
-                    paddingBottom: i < 3 ? 28 : 0,
-                    borderBottom: i < 3 ? "1px solid rgba(30,43,94,0.1)" : "none",
-                  }}
-                >
+                {
+                  title: "Built for your vertical",
+                  desc: "Whether you're running a real estate brokerage, an aesthetics clinic, or a mortgage operation — the Gizmo CRM comes pre-configured for how your business actually works. Not a generic tool you have to bend into shape.",
+                  icon: "◎",
+                },
+                {
+                  title: "Automations that actually run",
+                  desc: "60-second lead response, nurture sequences, reactivation campaigns, and owner dashboards — all built in. Every automation is monitored and maintained monthly so nothing goes stale.",
+                  icon: "⚡",
+                },
+                {
+                  title: "Use it yourself or hand it to us",
+                  desc: "Start a free 14-day trial and run it yourself. Or let our managed service team build, configure, and operate everything for you every month. Either way, you get a system that works.",
+                  icon: "→",
+                },
+              ].map((f, i) => (
+                <div key={i} style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
                   <div
                     style={{
                       fontFamily: "'Syne', sans-serif",
-                      fontWeight: 800,
-                      fontSize: 28,
+                      fontSize: 20,
                       color: RED,
-                      lineHeight: 1,
-                      marginBottom: 6,
+                      flexShrink: 0,
+                      marginTop: 2,
+                      width: 32,
                     }}
                   >
-                    {s.num}
+                    {f.icon}
                   </div>
-                  <div style={{ fontSize: 14, color: MUTED, lineHeight: 1.5 }}>
-                    {s.text}
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: "'Syne', sans-serif",
+                        fontWeight: 700,
+                        fontSize: 15,
+                        color: NAVY,
+                        marginBottom: 8,
+                        letterSpacing: -0.2,
+                      }}
+                    >
+                      {f.title}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: 14,
+                        color: MUTED,
+                        lineHeight: 1.7,
+                        fontWeight: 300,
+                      }}
+                    >
+                      {f.desc}
+                    </div>
                   </div>
                 </div>
               ))}
+
+              <div style={{ display: "flex", gap: 12, marginTop: 8 }}>
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  style={{
+                    background: RED,
+                    color: WHITE,
+                    border: "none",
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    padding: "12px 24px",
+                    cursor: "pointer",
+                    letterSpacing: 0.5,
+                    textTransform: "uppercase",
+                    whiteSpace: "nowrap",
+                    transition: "transform 0.2s, box-shadow 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = "translateY(-1px)";
+                    e.target.style.boxShadow = "0 6px 20px rgba(200,16,46,0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = "translateY(0)";
+                    e.target.style.boxShadow = "none";
+                  }}
+                >
+                  Book a Demo →
+                </button>
+                
+                  href="https://app.gizmo-ops.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "transparent",
+                    color: NAVY,
+                    border: `1px solid ${NAVY}`,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    padding: "12px 24px",
+                    cursor: "pointer",
+                    letterSpacing: 0.5,
+                    textTransform: "uppercase",
+                    whiteSpace: "nowrap",
+                    textDecoration: "none",
+                    display: "inline-block",
+                    transition: "all 0.3s",
+                  }}
+                >
+                  Start Free Trial
+                </a>
+              </div>
             </div>
           </FadeIn>
         </div>
+
       </div>
     </Section>
   );
