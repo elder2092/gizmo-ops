@@ -207,7 +207,7 @@ function Nav({ activeSection }) {
           >
             Sign In
           </a>
-
+</div>
         {/* Mobile hamburger */}
         <button
           className="nav-mobile-btn"
