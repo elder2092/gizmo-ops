@@ -87,7 +87,7 @@ function Nav({ activeSection }) {
           </span>
         </div>
 
-        {/* Desktop links */}
+       {/* Desktop links */}
         <div
           style={{
             display: "flex",
@@ -148,13 +148,7 @@ function Nav({ activeSection }) {
           >
             Book Demo
           </button>
-          <button
-            onClick={() =>
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            <a
+          
             href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -186,8 +180,7 @@ function Nav({ activeSection }) {
             Start Trial
           </a>
           
-           <a 
-          href="https://app.gizmo-ops.com"
+            href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -203,8 +196,7 @@ function Nav({ activeSection }) {
               transition: "all 0.3s",
               cursor: "pointer",
               whiteSpace: "nowrap",
-              textAlign: "center",
-              lineHeight: 1.2,
+              display: "inline-block",
             }}
             onMouseEnter={(e) => {
               e.target.style.borderColor = WHITE;
