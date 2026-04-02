@@ -134,6 +134,7 @@ function Nav({ activeSection }) {
               cursor: "pointer",
               letterSpacing: 0.5,
               textTransform: "uppercase",
+              whiteSpace: "nowrap",
               transition: "transform 0.2s, box-shadow 0.2s",
             }}
             onMouseEnter={(e) => {
@@ -164,6 +165,7 @@ function Nav({ activeSection }) {
               cursor: "pointer",
               letterSpacing: 0.5,
               textTransform: "uppercase",
+              whiteSpace: "nowrap",
               transition: "transform 0.2s, box-shadow 0.2s",
             }}
             onMouseEnter={(e) => {
