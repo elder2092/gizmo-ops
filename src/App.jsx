@@ -178,7 +178,8 @@ function Nav({ activeSection }) {
             Start Trial
           </button>
           
-            href="https://app.gizmo-ops.com"
+           <a 
+          href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
             style={{
