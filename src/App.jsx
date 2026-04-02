@@ -154,6 +154,9 @@ function Nav({ activeSection }) {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
+            href="https://app.gizmo-ops.com"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               background: WHITE,
               border: "none",
@@ -161,12 +164,14 @@ function Nav({ activeSection }) {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13,
               fontWeight: 600,
-              padding: "4px 20px",
+              padding: "7px 24px",
               cursor: "pointer",
               letterSpacing: 0.5,
               textTransform: "uppercase",
               whiteSpace: "nowrap",
+              textDecoration: "none",
               transition: "transform 0.2s, box-shadow 0.2s",
+              display: "inline-block",
             }}
             onMouseEnter={(e) => {
               e.target.style.transform = "translateY(-1px)";
@@ -178,7 +183,7 @@ function Nav({ activeSection }) {
             }}
           >
             Start Trial
-          </button>
+          </a>
           
            <a 
           href="https://app.gizmo-ops.com"
