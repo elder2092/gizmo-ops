@@ -429,18 +429,16 @@ function Hero() {
             style={{
               fontFamily: "'Syne', sans-serif",
               fontWeight: 800,
-              fontSize: "clamp(36px, 5.5vw, 64px)",
+              fontSize: "clamp(28px, 4.2vw, 52px)",
               color: WHITE,
               lineHeight: 1.1,
-              maxWidth: 820,
+              maxWidth: 720,
               marginBottom: 28,
               letterSpacing: -1,
             }}
           >
             The CRM built for{" "}
             <span style={{ color: RED }}>relationship-driven businesses.</span>
-            <br />
-            We'll run it for you too.
           </h1>
         </FadeIn>
 
