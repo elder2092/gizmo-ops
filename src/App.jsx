@@ -118,7 +118,11 @@ function Nav({ activeSection }) {
             </button>
           ))}
           <button
-            onClick={() => scrollTo("contact")}
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
             style={{
               background: RED,
               border: "none",
@@ -126,36 +130,83 @@ function Nav({ activeSection }) {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13,
               fontWeight: 600,
-              padding: "10px 22px",
+              padding: "10px 20px",
               cursor: "pointer",
               letterSpacing: 0.5,
-              transition: "transform 0.2s",
+              textTransform: "uppercase",
+              transition: "transform 0.2s, box-shadow 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = "translateY(-1px)";
+              e.target.style.boxShadow = "0 6px 20px rgba(200,16,46,0.4)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = "translateY(0)";
+              e.target.style.boxShadow = "none";
             }}
           >
-            Free Audit
+            Book Demo
           </button>
-         
-          <a
+          <button
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            style={{
+              background: WHITE,
+              border: "none",
+              color: NAVY,
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 13,
+              fontWeight: 600,
+              padding: "10px 20px",
+              cursor: "pointer",
+              letterSpacing: 0.5,
+              textTransform: "uppercase",
+              transition: "transform 0.2s, box-shadow 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = "translateY(-1px)";
+              e.target.style.boxShadow = "0 6px 20px rgba(255,255,255,0.15)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = "translateY(0)";
+              e.target.style.boxShadow = "none";
+            }}
+          >
+            Start Trial
+          </button>
+          
             href="https://app.gizmo-ops.com"
             target="_blank"
             rel="noopener noreferrer"
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13,
-              fontWeight: 500,
-              color: "rgba(255,255,255,0.6)",
+              fontWeight: 600,
+              color: "rgba(255,255,255,0.8)",
               textDecoration: "none",
               letterSpacing: 0.5,
               textTransform: "uppercase",
-              transition: "color 0.3s",
+              border: "1.5px solid rgba(255,255,255,0.45)",
+              padding: "8px 18px",
+              transition: "all 0.3s",
               cursor: "pointer",
             }}
-            onMouseEnter={(e) => (e.target.style.color = RED)}
-            onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.6)")}
+            onMouseEnter={(e) => {
+              e.target.style.borderColor = WHITE;
+              e.target.style.color = WHITE;
+              e.target.style.background = "rgba(255,255,255,0.06)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.borderColor = "rgba(255,255,255,0.45)";
+              e.target.style.color = "rgba(255,255,255,0.8)";
+              e.target.style.background = "transparent";
+            }}
           >
             Sign In
           </a>
-        </div>
 
         {/* Mobile hamburger */}
         <button
