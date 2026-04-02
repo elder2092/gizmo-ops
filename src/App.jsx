@@ -821,6 +821,7 @@ function About() {
                   Book a Demo →
                 </button>
                 
+                <a
                   href="https://app.gizmo-ops.com"
                   target="_blank"
                   rel="noopener noreferrer"
