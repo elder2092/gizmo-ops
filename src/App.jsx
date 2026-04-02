@@ -61,7 +61,7 @@ function Nav({ activeSection }) {
       >
         <div
           onClick={() => scrollTo("home")}
-          style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 10 }}
+          style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 10, marginRight: 32 }}
         >
           <span
             style={{
@@ -91,9 +91,8 @@ function Nav({ activeSection }) {
         <div
           style={{
             display: "flex",
-            gap: 28,
+            gap: 24,
             alignItems: "center",
-            marginLeft: "auto",
           }}
           className="nav-desktop"
         >
