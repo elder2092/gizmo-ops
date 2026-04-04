@@ -17,7 +17,10 @@ function UrgencyBanner() {
       padding: "11px 24px",
       textAlign: "center",
       borderBottom: "1px solid rgba(255,255,255,0.06)",
-      position: "relative",
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
       zIndex: 1001,
     }}>
       <p style={{
@@ -167,6 +170,12 @@ function Nav({ activeSection }) {
               {l.label}
             </button>
           ))}
+          <a href="https://app.gizmo-ops.com/auth/signup" target="_blank" rel="noopener noreferrer" style={{
+            fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 500,
+            color: "rgba(255,255,255,0.7)", textDecoration: "none", padding: "8px 0",
+          }}>
+            Start Trial
+          </a>
           <a href="https://app.gizmo-ops.com" target="_blank" rel="noopener noreferrer" style={{
             fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 500,
             color: "rgba(255,255,255,0.5)", textDecoration: "none", padding: "8px 0",
@@ -230,7 +239,7 @@ function Hero() {
     <Section id="home" bg={NAVY} style={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
       <div style={{ position: "absolute", right: -80, top: -60, fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "45vw", color: "rgba(255,255,255,0.02)", lineHeight: 1, pointerEvents: "none", userSelect: "none" }}>G</div>
       <div style={{ position: "absolute", left: 0, top: 0, width: 4, height: "100%", background: RED }} />
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", position: "relative", zIndex: 1, width: "100%" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "160px 24px 80px", position: "relative", zIndex: 1, width: "100%" }}>
         <FadeIn>
           <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 4, color: RED, marginBottom: 24 }}>
             CRM Software · Managed Revenue Operations
@@ -398,7 +407,6 @@ function Services() {
             </h2>
           </div>
         </FadeIn>
-
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48 }} className="services-grid">
           <FadeIn>
             <div>
@@ -429,7 +437,6 @@ function Services() {
             </div>
           </FadeIn>
         </div>
-
         <FadeIn delay={0.25} style={{ marginTop: 72 }}>
           <h3 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: "clamp(24px, 3vw, 32px)", color: NAVY, textAlign: "center", marginBottom: 48, letterSpacing: -0.5 }}>How It Works</h3>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }} className="how-grid">
@@ -461,7 +468,6 @@ function LeadFlow() {
     { num: "04", icon: "📊", title: "Pipeline Tracked", desc: "Every lead staged, scored, and visible. You see exactly where every opportunity stands.", time: "Always-on pipeline" },
     { num: "05", icon: "🏆", title: "Deal Closed", desc: "Revenue tracked. Client retained. Referral sequence triggered. The cycle continues.", time: "Ongoing retention" },
   ];
-
   return (
     <div style={{ background: DARK, padding: "72px 24px", overflow: "hidden" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -476,13 +482,7 @@ function LeadFlow() {
         <FadeIn delay={0.1}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 0 }} className="flow-grid">
             {steps.map((step, i) => (
-              <div key={i} style={{
-                padding: "28px 20px",
-                border: "1px solid rgba(255,255,255,0.06)",
-                background: i === 4 ? "rgba(200,16,46,0.08)" : "rgba(255,255,255,0.02)",
-                borderColor: i === 4 ? "rgba(200,16,46,0.2)" : "rgba(255,255,255,0.06)",
-                position: "relative",
-              }}>
+              <div key={i} style={{ padding: "28px 20px", border: "1px solid rgba(255,255,255,0.06)", background: i === 4 ? "rgba(200,16,46,0.08)" : "rgba(255,255,255,0.02)", borderColor: i === 4 ? "rgba(200,16,46,0.2)" : "rgba(255,255,255,0.06)" }}>
                 <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2, color: i === 4 ? "rgba(200,16,46,0.5)" : "rgba(255,255,255,0.2)", marginBottom: 10 }}>Step {step.num}</div>
                 <div style={{ fontSize: 22, marginBottom: 10 }}>{step.icon}</div>
                 <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: 13, color: i === 4 ? RED : WHITE, marginBottom: 8, textTransform: "uppercase", letterSpacing: 0.5 }}>{step.title}</div>
@@ -628,7 +628,6 @@ function FoundingClients() {
       <div style={{ position: "absolute", right: -40, top: -40, fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 280, color: "rgba(255,255,255,0.02)", lineHeight: 1, pointerEvents: "none" }}>FC</div>
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }} className="contact-grid">
-
           <FadeIn>
             <div>
               <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 4, color: GOLD, marginBottom: 16 }}>Founding Clients</div>
@@ -655,7 +654,6 @@ function FoundingClients() {
               >Apply for a Founding Spot →</button>
             </div>
           </FadeIn>
-
           <FadeIn delay={0.2}>
             <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", padding: 40 }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 28, paddingBottom: 28, borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
@@ -681,7 +679,6 @@ function FoundingClients() {
               </div>
             </div>
           </FadeIn>
-
         </div>
       </div>
     </Section>
@@ -824,6 +821,7 @@ export default function GizmoOps() {
         }
       `}</style>
 
+      <div style={{ height: 40 }} />
       <UrgencyBanner />
       <Nav activeSection={activeSection} />
       <Hero />
