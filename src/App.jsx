@@ -358,7 +358,7 @@ function About() {
                   onMouseEnter={(e) => { e.target.style.transform = "translateY(-1px)"; e.target.style.boxShadow = "0 6px 20px rgba(200,16,46,0.4)"; }}
                   onMouseLeave={(e) => { e.target.style.transform = "translateY(0)"; e.target.style.boxShadow = "none"; }}
                 >Book a Demo →</button>
-                <a href="https://app.gizmo-ops.com" target="_blank" rel="noopener noreferrer" style={{ background: "transparent", color: NAVY, border: `1px solid ${NAVY}`, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, padding: "12px 24px", cursor: "pointer", letterSpacing: 0.5, textTransform: "uppercase", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block", transition: "all 0.3s" }}>
+                <a href="https://app.gizmo-ops.com/auth/signup" target="_blank" rel="noopener noreferrer" style={{ background: "transparent", color: NAVY, border: `1px solid ${NAVY}`, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, padding: "12px 24px", cursor: "pointer", letterSpacing: 0.5, textTransform: "uppercase", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block", transition: "all 0.3s" }}>
                   Start Free Trial
                 </a>
               </div>
@@ -541,7 +541,7 @@ function MidCta() {
             onMouseEnter={(e) => { e.target.style.transform = "translateY(-2px)"; e.target.style.boxShadow = "0 8px 30px rgba(0,0,0,0.2)"; }}
             onMouseLeave={(e) => { e.target.style.transform = "translateY(0)"; e.target.style.boxShadow = "none"; }}
           >Book a Free Demo →</button>
-          <a href="https://app.gizmo-ops.com" target="_blank" rel="noopener noreferrer" style={{ background: "transparent", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.3)", fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", cursor: "pointer", letterSpacing: 0.5, textTransform: "uppercase", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block", transition: "all 0.3s" }}>
+          <a href="https://app.gizmo-ops.com/auth/signup" target="_blank" rel="noopener noreferrer" style={{ background: "transparent", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.3)", fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500, padding: "12px 28px", cursor: "pointer", letterSpacing: 0.5, textTransform: "uppercase", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block", transition: "all 0.3s" }}>
             Start Free Trial
           </a>
           <span style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", fontWeight: 300 }}>14-day free trial · No credit card required</span>
