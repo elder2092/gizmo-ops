@@ -121,7 +121,7 @@ function Nav({ activeSection }) {
           >
             Book Demo
           </button>
-          <a href="https://app.gizmo-ops.com" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://app.gizmo-ops.com/auth/signup" target="_blank" rel="noopener noreferrer" style={{
             background: WHITE, color: NAVY, fontFamily: "'DM Sans', sans-serif",
             fontSize: 13, fontWeight: 600, padding: "7px 24px", cursor: "pointer",
             letterSpacing: 0.5, textTransform: "uppercase", whiteSpace: "nowrap",
@@ -260,7 +260,7 @@ function Hero() {
               onMouseEnter={(e) => { e.target.style.transform = "translateY(-2px)"; e.target.style.boxShadow = "0 8px 30px rgba(200,16,46,0.4)"; }}
               onMouseLeave={(e) => { e.target.style.transform = "translateY(0)"; e.target.style.boxShadow = "none"; }}
             >Book Demo →</button>
-            <a href="https://app.gizmo-ops.com" target="_blank" rel="noopener noreferrer" style={{ background: WHITE, color: NAVY, border: "none", fontFamily: "'DM Sans', sans-serif", fontSize: 15, fontWeight: 600, padding: "16px 36px", cursor: "pointer", letterSpacing: 0.5, textTransform: "uppercase", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block", transition: "transform 0.2s, box-shadow 0.2s" }}
+            <a href="https://app.gizmo-ops.com/auth/signup" target="_blank" rel="noopener noreferrer" style={{ background: WHITE, color: NAVY, border: "none", fontFamily: "'DM Sans', sans-serif", fontSize: 15, fontWeight: 600, padding: "16px 36px", cursor: "pointer", letterSpacing: 0.5, textTransform: "uppercase", whiteSpace: "nowrap", textDecoration: "none", display: "inline-block", transition: "transform 0.2s, box-shadow 0.2s" }}
               onMouseEnter={(e) => { e.target.style.transform = "translateY(-2px)"; e.target.style.boxShadow = "0 8px 30px rgba(255,255,255,0.15)"; }}
               onMouseLeave={(e) => { e.target.style.transform = "translateY(0)"; e.target.style.boxShadow = "none"; }}
             >Start Trial →</a>
@@ -606,7 +606,7 @@ function Pricing() {
                   {t.price}<span style={{ fontSize: 14, fontWeight: 400, color: MUTED }}>{t.period}</span>
                 </div>
                 <div style={{ fontSize: 14, color: MUTED, lineHeight: 1.6, fontWeight: 300, flex: 1 }}>{t.note}</div>
-                <a href="https://app.gizmo-ops.com" target="_blank" rel="noopener noreferrer" style={{ marginTop: 24, width: "100%", padding: "14px", background: "transparent", color: NAVY, border: `1px solid ${NAVY}`, fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, cursor: "pointer", letterSpacing: 0.5, transition: "all 0.3s", textDecoration: "none", display: "block", textAlign: "center", boxSizing: "border-box" }}>
+                <a href="https://app.gizmo-ops.com/auth/signup" target="_blank" rel="noopener noreferrer" style={{ marginTop: 24, width: "100%", padding: "14px", background: "transparent", color: NAVY, border: `1px solid ${NAVY}`, fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, cursor: "pointer", letterSpacing: 0.5, transition: "all 0.3s", textDecoration: "none", display: "block", textAlign: "center", boxSizing: "border-box" }}>
                   Start Free Trial
                 </a>
               </div>
