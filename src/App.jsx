@@ -49,7 +49,7 @@ function Nav({ activeSection, bannerVisible }) {
   const scrollTo = (id) => { document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); setMenuOpen(false); };
 
   return (
-    <nav style={{ position: "fixed", top: topOffset, left: 0, right: 0, zIndex: 1000, background: scrolled || menuOpen ? "rgba(30,43,94,0.98)" : "transparent", backdropFilter: scrolled || menuOpen ? "blur(12px)" : "none", transition: "top 0.3s ease, background 0.4s ease", borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "none" }}>
+    <nav style={{ position: "fixed", top: topOffset, left: 0, right: 0, zIndex: 1000, background: "rgba(30,43,94,0.98)", backdropFilter: "blur(12px)", transition: "top 0.3s ease, background 0.4s ease", borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "none" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px", display: "flex", alignItems: "center", justifyContent: "space-between", height: NAV_H }}>
         <div onClick={() => scrollTo("home")} style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
           <span style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800, fontSize: 20, color: WHITE, letterSpacing: -0.5 }}>GIZMO</span>
